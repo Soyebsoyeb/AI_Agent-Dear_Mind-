@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Mind - "Where thoughts feel heard."</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dear Mind 🤍</h1>
+            <p>Where thoughts feel heard</p>
+        </div>
+        
+        <div class="form-container" id="formContainer">
+            <form id="thoughtForm">
+                <div class="form-group">
+                    <label for="query">Your Thought</label>
+                    <div class="input-container">
+                        <textarea id="query" name="query" placeholder="What's on your mind?" required></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mood">Current Mood</label>
+                    <select id="mood" name="mood" required>
+                        <option value="" disabled selected>Select your mood</option>
+                        <option value="happy">😊 Happy</option>
+                        <option value="excited">😃 Excited</option>
+                        <option value="thoughtful">🤔 Thoughtful</option>
+                        <option value="neutral">😐 Neutral</option>
+                        <option value="sad">😢 Sad</option>
+                        <option value="angry">😠 Angry</option>
+                    </select>
+                    
+                    <div class="mood-options">
+                        <div class="mood-option" data-value="happy">
+                            <div class="mood-emoji">😊</div>
+                            <div class="mood-label">Happy</div>
+                        </div>
+                        <div class="mood-option" data-value="excited">
+                            <div class="mood-emoji">😃</div>
+                            <div class="mood-label">Excited</div>
+                        </div>
+                        <div class="mood-option" data-value="thoughtful">
+                            <div class="mood-emoji">🤔</div>
+                            <div class="mood-label">Thoughtful</div>
+                        </div>
+                        <div class="mood-option" data-value="neutral">
+                            <div class="mood-emoji">😐</div>
+                            <div class="mood-label">Neutral</div>
+                        </div>
+                        <div class="mood-option" data-value="sad">
+                            <div class="mood-emoji">😢</div>
+                            <div class="mood-label">Sad</div>
+                        </div>
+                        <div class="mood-option" data-value="angry">
+                            <div class="mood-emoji">😠</div>
+                            <div class="mood-label">Angry</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" id="submitBtn">
+                    <span>Share Thought</span>
+                </button>
+            </form>
+        </div>
+        
+        <div class="loading" id="loadingIndicator">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Processing your thought...</div>
+        </div>
+        
+        <div class="response-container" id="responseContainer">
+            <div class="response-header">
+                <div class="response-icon">✧</div>
+                <div class="response-title">From code to content, logic to design</div>
+            </div>
+            <div class="response-content" id="responseContent">
+                <!-- Webhook response will appear here -->
+            </div>
+            <div class="response-meta">
+                Your thought has been transformed into something beautiful
+            </div>
+            <button class="new-thread-btn" id="newThoughtBtn">Share Another Thought</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
